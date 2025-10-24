@@ -1,0 +1,83 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "tray"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "custom/poweroff"
+    ],
+    "custom/poweroff": {
+        "format": "<span color='#FF3C3C'> 󰐥 </span>",
+        "tooltip": true,
+        "tooltip-format": "关机",
+        "on-click": "/home/hamster/.shutdown.sh"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "warp-on-scroll": false,
+        "format": "{name}"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "wlr/taskbar": {},
+    "cpu": {
+        "format": "<span color='#FF69B9'> </span>{usage}%"
+    },
+    "memory": {
+        "format": "<span color='#6AFF5A'> </span>{used:0.0f}%"
+    },
+    "clock": {
+        "format": "<span color='#BF00FF'> </span>{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:L%Y 年 %m 月 %d 日, %A}"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "<span color='skyblue'>{icon} </span>{capacity}%",
+        "format-charging": "<span color='green'>{icon} </span>{capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time}{icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁼",
+            "󰁿",
+            "󰂁",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "<span color='#00C9FF'> </span>{volume}%",
+        "format-bluetooth-muted": "<span color='#00C9FF'> </span>{volume}%",
+        "format-muted": "󰖁",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click-right": "pwvucontrol",
+        "on-click": "pamixer -t"
+    }
+}

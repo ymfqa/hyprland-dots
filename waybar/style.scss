@@ -1,0 +1,47 @@
+$primary:#c8b6ff;
+$middle:#e7c6ff;
+$second:#bbd0ff;
+$light:#ffcbf2;
+$force:#3c096c;
+
+* {
+  font-family: "Maple Mono Normal NL NF CN";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#waybar{
+	background-color: rgba(0, 0, 0, 0);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#workspaces{
+	margin: 0 3px;
+}
+
+#workspaces button,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#clock,
+#window,
+#taskbar,
+#custom-poweroff,
+#tray{
+	background-color: $primary;
+	color: $force;
+	padding: 0 10px;
+	margin:0 6px;
+	border-radius: 10px;
+}
+
+#workspaces button:hover{
+	background-color: $light;
+}
+
+#workspaces button.active{
+	background-color: $second;
+}
+
