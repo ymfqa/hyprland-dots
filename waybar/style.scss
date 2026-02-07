@@ -1,8 +1,9 @@
 $primary:#c8b6ff;
 $middle:#e7c6ff;
 $second:#bbd0ff;
-$light:#ffcbf2;
+$light:#feeafa;
 $force:#3c096c;
+$active:#548c2f;
 
 * {
   font-family: "Maple Mono Normal NL NF CN";
@@ -14,15 +15,22 @@ $force:#3c096c;
 	background-color: rgba(0, 0, 0, 0);
 	padding-left: 20px;
 	padding-right: 20px;
+    margin-top: 10px;
 }
 
 #workspaces{
+	background-color: $primary;
 	margin: 0 3px;
+	border-radius: 10px;
 }
 
-#workspaces button,
-#cpu,
-#memory,
+#workspaces button{
+	color: $force;
+	padding: 4px;
+	border-radius: 10px;
+}
+
+#network,
 #pulseaudio,
 #battery,
 #clock,
@@ -38,10 +46,13 @@ $force:#3c096c;
 }
 
 #workspaces button:hover{
-	background-color: $light;
+	background-color: $second;
+	padding: 4px;
+	color: $light;
+    font-size: 30px;
 }
 
 #workspaces button.active{
-	background-color: $second;
+	color: $light;
 }
 

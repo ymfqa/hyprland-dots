@@ -3,8 +3,8 @@ Documents
 Downloads
 Pictures
 Templates
-fish/conf.d
-fish
+fish/*/
+fish/fish_variables
 nvim
 other
 wallpaper.MP4

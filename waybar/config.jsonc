@@ -11,13 +11,19 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
+        "network",
         "pulseaudio",
         "battery",
         "clock",
         "custom/poweroff"
     ],
+    "network": {
+        "format-wifi": "<span color='#37C8FF'> </span> {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected<span color='#F0C341'> ⚠ </span> ",
+        "on-click": "kitty nmtui"
+    },
     "custom/poweroff": {
         "format": "<span color='#FF3C3C'> 󰐥 </span>",
         "tooltip": true,
@@ -27,7 +33,7 @@
     "hyprland/workspaces": {
         "disable-scroll": true,
         "warp-on-scroll": false,
-        "format": "{name}"
+        "format": " "
     },
     "tray": {
         "spacing": 10
