@@ -22,7 +22,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected<span color='#F0C341'> ⚠ </span> ",
-        "on-click": "kitty nmtui"
+        "on-click": "nm-applet"
     },
     "custom/poweroff": {
         "format": "<span color='#FF3C3C'> 󰐥 </span>",
@@ -33,7 +33,7 @@
     "hyprland/workspaces": {
         "disable-scroll": true,
         "warp-on-scroll": false,
-        "format": " "
+        "format": "{name}"
     },
     "tray": {
         "spacing": 10
@@ -57,7 +57,7 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-full": "<span color='skyblue'>{icon} </span>{capacity}%",
+        "format-full": "<span color='#5FFFAA'>{icon} </span>{capacity}%",
         "format-charging": "<span color='green'>{icon} </span>{capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time}{icon}",
@@ -71,8 +71,8 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "<span color='#00C9FF'> </span>{volume}%",
-        "format-bluetooth-muted": "<span color='#00C9FF'> </span>{volume}%",
+        "format-bluetooth": "<span color='#00ABFF'> </span>{volume}%",
+        "format-bluetooth-muted": "<span color='#00ABFF'>󰖁 </span>{volume}%",
         "format-muted": "󰖁",
         "format-source": " {volume}%",
         "format-source-muted": "",
@@ -83,7 +83,7 @@
                 ""
             ]
         },
-        "on-click-right": "pwvucontrol",
-        "on-click": "pamixer -t"
+        "on-click": "pwvucontrol",
+        "on-click-right": "blueman-manager"
     }
 }

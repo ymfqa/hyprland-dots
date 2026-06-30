@@ -1,0 +1,147 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+scan_timeout = 100
+
+format = """\
+$directory  \
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$dart\
+$kotlin\
+$haskell\
+$python\
+
+$git_branch\
+$git_status
+\
+$os \
+$sudo \
+$username \
+$status\
+$character
+"""
+right_format = """\
+$time\
+$cmd_duration
+"""
+
+[directory]
+format = "[$path](fg:#8E59E5)"
+use_logical_path = false
+truncation_length = 1000
+truncate_to_repo = false
+
+[git_status]
+disabled = false
+format = "([$all_status $ahead_behind](fg:#FF6F83))"
+
+[git_branch]
+format = "\n[$symbol$branch(:remote_branch)](fg:#F6A1BF) "
+symbol = " "
+
+[os]
+disabled = false
+format = "$symbol"
+
+[os.symbols]
+Windows = "[](fg:#009CE3)"
+Ubuntu = "[󰕈](fg:#DD4F25)"
+SUSE = "[](fg:#70B123)"
+Mint = "[󰣭](fg:#67B23C)"
+Macos = "[󰀵](fg:#6E6E6E)"
+Manjaro = "[](fg:#32B59C)"
+Linux = "[󰌽](fg:#E3E350)"
+Gentoo = "[󰣨](fg:#564296)"
+Fedora = "[󰣛](fg:#4d9acf)"
+Alpine = "[](fg:#0c5579)"
+Amazon = "[](fg:#3E3E3E)"
+Android = "[](fg:#01cc42)"
+Arch = "[󰣇](fg:#1b8cc5)"
+Artix = "[󰣇](fg:#1b8cc5)"
+CentOS = "[](fg:#8c1f97)"
+Debian = "[󰣚](fg:#b30b47)"
+Redhat = "[󱄛](fg:#e20000)"
+RedHatEnterprise = "[󱄛](fg:#e20000)"
+
+[username]
+show_always = true
+format = '[$user]($style)'
+style_root = "red bold"
+style_user = "#C8AAEB bold"
+
+
+[status]
+format = '[$status ]($style)'
+disabled = false
+
+[character]
+success_symbol = "[->](fg:#73AAEB bold)"
+error_symbol = "[->✘](fg:#CD2D2D bold)"
+
+[sudo]
+style = 'bold green'
+format = "[sudo]($style)"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%F %T"
+format = '[  $time ](fg:#8C9AB7)'
+
+[cmd_duration]
+min_time = 1000
+format = "[$duration](fg:#A2E5A8)"
+
+[nodejs]
+symbol = ""
+format = '[$symbol( $version)](fg:#4c9641)'
+
+[c]
+symbol = " "
+format = '[$symbol( $version)](fg:blue)'
+
+[cpp]
+disabled = false
+symbol = " "
+format = '[$symbol( $version)](fg:blue)'
+
+[rust]
+symbol = ""
+format = '[$symbol( $version)](fg:#FFC4C9)'
+
+[golang]
+symbol = ""
+format = '[$symbol( $version)](fg:#70d6f1)'
+
+[php]
+symbol = ""
+format = '[$symbol( $version)](fg:#7075aa)'
+
+[java]
+symbol = " "
+format = '[$symbol( $version)](fg:#d58e89)'
+
+[kotlin]
+symbol = ""
+format = '[$symbol( $version)](fg:#a522d8)'
+
+[haskell]
+symbol = ""
+format = '[$symbol( $version)](fg:#564B74)'
+
+[dart]
+symbol = ""
+format = '[$symbol( $version)](fg:#3cbbf1)'
+
+[python]
+symbol = ""
+format = '[$symbol( $version)](fg:#5686B3)'
+
+[docker_context]
+symbol = ""
+format = '[$symbol( $version)](fg:#1c5ee1)'

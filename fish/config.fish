@@ -1,14 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_greeting
-	# source /usr/share/fish/vendor_completions.d/yay.fish
-	# set -gx PATH $PATH ~/go/bin
-	# set -gx ANDROID_HOME $HOME/Android/Sdk
-	# set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
-	# set -gx PATH $ANDROID_HOME/platform-tools $PATH
-	# set -gx PATH $ANDROID_HOME/tools/bin $PATH
-	# set -gx PATH $ANDROID_HOME/emulator $PATH
+	set -gx PATH $PATH (go env GOPATH)/bin
+	set -gx PATH $PATH $HOME/.local/bin
+	set -gx PATH $PATH $HOME/Android/Sdk/emulator
+	set -gx PATH $PATH /var/lib/flatpak/exports/share/applications/
+	starship init fish | source
 end
 
-# Added by Qoder CLI installer
-set -gx PATH $PATH /home/hamster/.local/bin
